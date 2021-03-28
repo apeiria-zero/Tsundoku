@@ -1,0 +1,11 @@
+<div class="main posts-index">
+  <div class="container">
+  <% @records.each do |record| %>
+    <div class="posts-index-item">
+      <h1>
+      <%= link_to(record.book_name,"/records/#{record.id}/show") %>
+      </h1>
+    </div>
+    <% end %>
+  </div>
+</div>

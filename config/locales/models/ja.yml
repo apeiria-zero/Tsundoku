@@ -1,0 +1,6 @@
+ja:
+  activerecord:
+    attributes:
+      record:
+        book_name: 本のタイトル
+        user_id: ユーザーID

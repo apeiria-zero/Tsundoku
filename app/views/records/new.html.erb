@@ -1,0 +1,21 @@
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">積読する</h1>
+    <%= form_tag("/records/create") do %>
+    <div class="form">
+      <div class="form-body">
+          <% @record.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+        title
+        <textarea name="book_name" rows="1"><%= @record.book_name %></textarea><br>
+        <!--memo
+        <textarea name="memo" rows="1"></textarea> -->
+        <input type="submit" value="積む">
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

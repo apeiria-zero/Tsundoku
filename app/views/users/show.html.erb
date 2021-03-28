@@ -1,0 +1,17 @@
+<div class="main posts-index">
+  <div class="container">
+  <div class="user">
+      <h2><%= @user.name+"さんの積読一覧です" %></h2>
+      <% if @user.id==@current_user.id %>
+      <%= link_to("ユーザー情報編集","/users/#{@user.id}/edit") %>
+      <% end %>
+    </div>
+    <% @user.records.each do |record| %>
+      <div class="posts-index-item">
+      <h1>
+      <%= link_to(record.book_name,"/records/#{record.id}/show") %>
+      </h1>
+    </div>
+    <% end %>
+  </div>
+</div>
